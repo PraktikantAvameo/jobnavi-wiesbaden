@@ -280,6 +280,6 @@ $.get( "/backend/Logout",function(data){
 	console.log("test funktioniert");
 });
 
-//test
+
 
 });
