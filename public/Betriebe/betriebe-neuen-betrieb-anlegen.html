@@ -1,0 +1,214 @@
+<!Doctype>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.1.js"
+		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		crossorigin="anonymous"> </script>
+		<script src="/client.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+		<link href="/style.css" rel="stylesheet"/>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	
+	<body>
+		<div class="container" id="container-div">
+			<section id="header">
+				<div class="col-md-4 col-xs-6" id="logo-container"><img src="http://jobnavi-wiesbaden.pmode-dev.de/img/shared/Logo-Jobnavi.png" alt="logo"></div>
+                <div class="col-md-4 col-md-offset-4 col-xs-6" id="logo2-container"><img src="http://jobnavi-wiesbaden.pmode-dev.de/backend/img/logo_stadt.gif" alt="logo2"></div>
+			</section>
+			
+			<section id="login-startseite-header">
+				<div class="col-md-12">
+				<div class="col-md-12 hintergrund-farbe"><h1>Administrations-Bereich der Jobnavi-Datenbank</h1></div>
+				</div>
+			</section>
+			
+			<section id="login-startseite-hauptteil">
+				<div class="col-md-12">
+				<div class="hintergrund-farbe">
+				<div class="table-responsive overflow-x-visible">
+					<table class="table">
+							<tr>
+								<td><h1>Praktikumspl&auml;tze</h1></td>
+								<td><h1>Branchen</h1></td>
+								<td><h1>Betriebe</h1></td>
+							</tr>
+						
+						
+						<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-anlegen">Neuen Praktikumsplatz anlegen</a></li></td>
+									<td><li><a href="/get/branchen-neue-branche-anlegen">Neue Branche anlegen</a></li></td>
+									<td><li><a href="/get/betriebe-neuen-betrieb-anlegen">Neuen Betrieb anlegen</a></li></td>
+									<td><li><a href="/backend/Logout">Logout</a></li></td>
+								</ul>
+							</tr>
+						</div>
+						
+						<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-suchen-bearbeiten">Praktikumsplatz suchen/bearbeiten</a></li></td>
+									<td><li><a href="/get/branchen-branche-bearbeiten">Branche bearbeiten</a></li></td>
+									<td><li><a href="/get/betriebe-betrieb-suchen-bearbeiten">Betrieb suchen/bearbeiten</a></li></td>
+								</ul>
+							</tr>
+						</div>
+						
+						<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-alle-anonymen-plaetze-anzeigen">Alle anonymen Pl&auml;tze anzeigen</a></li></td>
+									<td><li><a href="/get/branchen-alle-branchen-anzeigen">Alle Branchen anzeigen</a></li></td>
+									<td><li><a href="/get/betriebe-alle-betriebe-anzeigen">Alle Betriebe anzeigen</a></li></td>
+								</ul>
+							</tr>
+						</div>
+						
+						<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-alle-praktikumsplaetze">Alle Pl&auml;tze anzeigen</a></li></td>
+									<td></td>
+									<td><li><a href="/get/betriebe-betriebe-exortieren">Betriebe exortieren (.csv)</a></li></td>
+								</ul>
+							</tr>
+						</div>
+					</table>
+				</div>
+				
+					<div class="hintergrund-farbe">
+				
+				  <h1>Neuen Betrieb anlegen</h1><br>
+					<form name="betriebneu" method="post" action="/post/betriebe-neuen-betrieb-anlegen">
+					<div class="table-responsive ">
+				   <table cellpadding="0" cellspacing="0" border="0">
+					<tr>
+					 <td>Name*:&nbsp;</td><td><input required type="text" class="form-control" name="name" value=""></td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Stra&szlig;e*:&nbsp;</td><td><input required type="text" class="form-control" name="strasse" value=""></td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>PLZ, Ort*:&nbsp;</td>
+					 <td>
+						<div class="input-group">
+							<input required class="form-control" type="text" name="plz" value="">
+							<div class="input-group-addon">-</div>
+							<input required class="form-control" type="text" name="ort" value="">		
+						</div>
+					 </td>
+					 
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Anrede Ansprechpartner:&nbsp;</td>
+					 <td>
+					  <select class="form-control" name="anrede">
+					   <option value="">Bitte w&auml;hlen</option>
+					   <option value="Frau" >Frau</option>
+					   <option value="Herr" >Herr</option>
+					  </select>
+					 </td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Vorname:&nbsp;</td><td><input type="text" class="form-control" name="vorname" value=""></td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Nachname:&nbsp;</td><td><input type="text" class="form-control" name="nachname" value=""></td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Mitarbeiteranzahl:&nbsp;</td>
+					 <td>
+					  <select class="form-control" name="mitarbeiteranzahl">
+					   <option value="">Bitte w&auml;hlen</option>
+					   <option value="1-5" >1-5</option>
+					   <option value="5-10" >5-10</option>
+					   <option value="10-25" >10-25</option>
+					   <option value="25-50" >25-50</option>
+					   <option value="50-100" >50-100</option>
+					 </select>
+					 </td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Interner Ansprechpartner:&nbsp;</td><td><input type="text" class="form-control" name="intern_ansprech" value=""></td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Telefon:&nbsp;</td><td><input type="text" class="form-control" name="telefon" value=""></td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Telefax:&nbsp;</td><td><input type="text" class="form-control" name="telefax" value=""></td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>E-Mail:&nbsp;</td><td><input type="text" class="form-control" name="email" value=""></td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Internet:&nbsp;</td>
+						<td>
+							<div class="input-group">
+								<div class="input-group-addon">http://</div>
+								<input type="text" class="form-control" name="url" value="">
+							</div>
+						</td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Notiz:&nbsp;</td><td><textarea class="form-control betrieb-neuen-betrieb-anlegen-notiz" name="betriebnotiz"></textarea></td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td>Logo:&nbsp;</td><td><input type="file" class="form-control" id="file-button" name="upload"></td>
+					</tr>
+					<tr>
+					 <td><br></td>
+					</tr>
+					<tr>
+					 <td></td>
+					 <td><input type="submit" class="btn btn-primary button-anlegen-betrieb-breite" id="button-suchen" value="Anlegen"></td>
+					</tr>
+				   </table>
+				   </div></div>
+				  </form>
+				</div>
+			</section>
+			</div>
+	</body>
+</html>
+				

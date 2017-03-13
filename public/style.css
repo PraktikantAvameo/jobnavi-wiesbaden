@@ -1,0 +1,149 @@
+#strich-Duenn{
+	border-bottom:2px solid #CC0000;
+}
+
+h1{
+	font-size: 22px;
+    line-height: 26px;
+    color: #4B4842;
+    padding: 40px 0 10px;
+    margin: 0;
+}
+
+h2{
+	font-size: 12px;
+    color: #4B4842;
+    padding: 10px 0 10px;
+    margin: 0;
+}
+
+p{
+	color: #4B4842;
+}
+
+a{
+	color: #ED9400;
+}
+a:hover{
+	text-decoration: none;
+	color: #ED9400;
+}
+
+.success{
+	color: green;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+.error{
+	color: red;
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+}
+
+.praktikumsplatz-anlegen-abstand{
+	margin: 0 0 15px 0px;
+    clear: both;
+}
+
+.button-breite{
+	width: 250px;
+}
+
+.betriebe-suchbegriff-formulare-position{
+	margin-left: -15px;
+}
+
+.button-anlegen-betrieb-breite{
+	width: 100%;
+}
+
+body{
+	background-image: url("http://jobnavi-wiesbaden.pmode-dev.de/img/shared/tile.gif");
+}
+
+#strich-Fett{
+	border-bottom:5px solid #CC0000;
+}
+
+#block-Beruf-Text{
+	background: #e2ddd3;
+    height: auto;/*30px;*/
+    border-bottom: 2px solid #ffffff;
+    font-size: 12px;
+    color: #645d56;
+    line-height: 30px;
+}
+
+#block-Branche-Selectbox{
+	background: #d3ccbe;
+    height: auto;/*30px;*/
+    border-bottom: 2px solid #ffffff;
+    font-size: 12px;
+    color: #645d56;
+    line-height: 30px;
+}
+
+#footer{
+	font-family: arial;
+    font-size: 12px;
+    color: #645d56;
+    line-height: 16px;
+}
+
+#container-div{
+	height: auto;
+	background-color: white;
+}
+
+#logo2-container{
+	text-align: right;
+}
+
+#button-suchen{
+	background-color: #ED9400;
+	border-color: #ED9400;
+}
+
+#textbox-login{
+
+}
+
+#testTable  td{
+	padding-bottom: 15px;
+}
+
+#praktikumsplatz-anlegen-textArea{
+	height: 250px;
+}
+
+#text-mitte{
+	margin-top: 125px;
+	line-height: 16px;
+}
+
+#file-button{
+	border: 0px solid transparent;
+	margin-left: -10px;
+}
+
+.hintergrund-farbe{
+	background-color: gray;/*#F9F7F8;*/
+}
+
+.betrieb-neuen-betrieb-anlegen-notiz{
+	width: 100%;
+	height: 250px!important;
+}
+
+.overflow-x-visible{
+	overflow-x: visible!important;
+}
+
+.displayNone{
+	display:none;
+}

@@ -1,0 +1,89 @@
+<!Doctype>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.1.js"
+		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		crossorigin="anonymous"> </script>
+		<script src="/client.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+		<link href="/style.css" rel="stylesheet"/>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	
+	<body>
+		<div class="container" id="container-div">
+			<section id="header">
+				<div class="col-md-4 col-xs-6" id="logo-container"><img src="http://jobnavi-wiesbaden.pmode-dev.de/img/shared/Logo-Jobnavi.png" alt="logo"></div>
+                <div class="col-md-4 col-md-offset-4 col-xs-6" id="logo2-container"><img src="http://jobnavi-wiesbaden.pmode-dev.de/backend/img/logo_stadt.gif" alt="logo2"></div>
+			</section>
+			
+			<section id="login-startseite-header">
+				<div class="col-md-12"><h1>Administrations-Bereich der Jobnavi-Datenbank</h1></div>
+			</section>
+			
+			
+			<section id="login-startseite-hauptteil">
+				<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table">
+							<tr>
+								<td><h1>Praktikumspl&auml;tze</h1></td>
+								<td><h1>Branchen</h1></td>
+								<td><h1>Betriebe</h1></td>
+							</tr>
+						
+						
+							<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-anlegen">Neuen Praktikumsplatz anlegen</a></li></td>
+									<td><li><a href="/get/branchen-neue-branche-anlegen">Neue Branche anlegen</a></li></td>
+									<td><li><a href="/get/betriebe-neuen-betrieb-anlegen">Neuen Betrieb anlegen</a></li></td>
+									<td><li><a href="/backend/Logout">Logout</a></li></td>
+								</ul>
+							</tr>
+						</div>
+						
+						<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-suchen-bearbeiten">Praktikumsplatz suchen/bearbeiten</a></li></td>
+									<td><li><a href="/get/branchen-branche-bearbeiten">Branche bearbeiten</a></li></td>
+									<td><li><a href="/get/betriebe-betrieb-suchen-bearbeiten">Betrieb suchen/bearbeiten</a></li></td>
+								</ul>
+							</tr>
+						</div>
+						
+						<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-alle-anonymen-plaetze-anzeigen">Alle anonymen Pl&auml;tze anzeigen</a></li></td>
+									<td><li><a href="/get/branchen-alle-branchen-anzeigen">Alle Branchen anzeigen</a></li></td>
+									<td><li><a href="/get/betriebe-alle-betriebe-anzeigen">Alle Betriebe anzeigen</a></li></td>
+								</ul>
+							</tr>
+						</div>
+						
+						<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-alle-praktikumsplaetze">Alle Pl&auml;tze anzeigen</a></li></td>
+									<td></td>
+									<td><li><a href="/get/betriebe-betriebe-exortieren">Betriebe exortieren (.csv)</a></li></td>
+								</ul>
+							</tr>
+						</div>
+					</table>
+				</div>
+				
+				<div class="col-md-12"><h1>Praktikumsplatz suchen/bearbeiten</h1></div>
+				<div class="col-md-12"><p>Sie k&ouml;nnen nach der Bezeichnung suchen.</p></div>
+				<div class="col-md-4"><p>Suchbegriff:</p></div>
+				<div class="col-md-4"><input type="text" class="form-control" name="suchtext" maxlength="30" value></div>
+				<div class="col-md-4"><button class="btn btn-primary" id="button-suchen">Suchen</button></div>
+			</section>
+		</body>
+</html>	

@@ -1,0 +1,151 @@
+<!Doctype>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.1.js"
+		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		crossorigin="anonymous"> </script>
+		<script src="./client.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+		<link href="style.css" rel="stylesheet"/>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		
+		
+		<script type="text/javascript" src="script.js"></script>
+	</head>
+	
+	<body>
+		<div class="container" id="container-div">
+			<section id="header">
+				<div class="col-md-4 col-xs-6" id="logo-container"><img src="http://jobnavi-wiesbaden.pmode-dev.de/img/shared/Logo-Jobnavi.png" alt="logo"></div>
+                <div class="col-md-4 col-md-offset-4 col-xs-6" id="logo2-container"><img src="http://jobnavi-wiesbaden.pmode-dev.de/img/shared/Logo-Wirtschaft-und-Liegenschaften.png" alt="logo2"></div>
+				<div class="col-md-12 col-xs-12" id="strich-Duenn"></div>
+			</section>
+			
+			<section id="praktikumsboersen-text">
+				<div class="col-md-12"><h1>Praktikumsb&ouml;rse</h1></div>
+				<div class="col-md-12" id="strich-Fett"></div>
+			</section>
+			
+			<section id="text">
+				<div class="col-md-12">
+					<p>Das Praktikum bietet eine gute M&ouml;glichkeit, erste Erfahrungen im Berufsleben zu sammeln und wichtige Kontakte für die Zukunft zu kn&uuml;pfen.</p>
+					
+					<p>Für alle interessierten Jugendlichen stellt der Jobnavi eine Praktikumsstellenb&ouml;rse zur Verfügung. </p>
+					
+					<p>Ausgew&auml;hlte Praktikumsangebote in Wiesbaden sind in der Online-Praktikumsb&ouml;rse zu finden. Dabei kann in der Jobnavi-Datenbank sowohl nach einem speziellen Beruf und/oder einer Branche gesucht werden. </p>
+				</div>
+			</section>
+			
+			<section  id="formular">
+				<div class="col-md-12"><h2><Praktikumsplätze finden</h2></div>
+				<form action="get/suche" method="GET">
+                    <div class="form-group">
+					
+					<div class="col-md-12" id="block-Beruf-Text">
+                        <div class="col-md-4"><label for="textfeld-Beruf">mit allen W&ouml;rtern</label></div>
+							<div class="col-md-8"><input type="text" class="form-control" id="textfeld-Beruf" value=" Bitte Beruf eingeben" onfocus="this.value=''"></div>
+					</div>
+					
+					<div class="col-md-12" id="block-Branche-Selectbox">
+						<div class="col-md-4"><label for="sel1">Suche nach Branche</label></div>
+						<div class="col-md-8">
+							<select class="form-control" id="sel1">
+								<option value="">Bitte Branche ausw&auml;hlen</option>
+								<option value="hb_21">Bank</option>
+								<option value="hb_18"></option>
+								<option value="hb_6">Computer &amp; EDV</option>
+								<option value="hb_7">Dienstleistung</option>
+								<option value="hb_12">Einzelhandel</option>
+								<option value="hb_5">Finanzen &amp; Versicherungen</option>
+								<option value="hb_19">Hotel</option>
+								<option value="hb_2">Immobilien &amp; Baugewerbe</option>
+								<option value="hb_1">Industrie &amp; Handwerk</option>
+								<option value="hb_14">Lebensmittel</option>
+								<option value="hb_22">Logistik und Kommunikation</option>
+								<option value="hb_9">Medizin &amp; Gesundheit</option>
+								<option value="hb_15"></option>
+								<option value="hb_17">Unternehmensberatung</option>
+								<option value="hb_16">Werbung</option>
+							</select>
+						</div>
+					</div>
+					
+				
+				<div class="row">
+					<div class="col-xs-12">
+	
+						<div class="btn-group">
+							<button class="btn btn-primary">5 Ergebnisse</button>
+							<button class="btn btn-primary dropdown.toggle" data-toggle="dropdown">
+								<span class="caret"></span>
+							</button>
+							
+							<ul class="dropdown-menu">
+								<li><a href="javascript:durchlaufe">5 Ergebnisse</a></li>
+								<li><a href="#">10 Ergebnisse</a></li>
+								<li><a href="#">20 Ergebnisse</a></li>
+								<li><a href="#">50 Ergebnisse</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+		
+				
+				<section>
+					<div class="col-md-12">
+						<select class="form-control" id="sel2">
+								 <option value="5">5 Ergebnisse</option>
+								 <option value="10">10 Ergebnisse</option>
+								 <option value="20">20 Ergebnisse</option>
+								 <option value="50">50 Ergebnisse</option>
+						</select>
+					</div>
+					
+					<button><span class="caret"></span></button>
+					<!--Button so ändern dass er nichts annimmt von dem Dropdown Menu-->
+				</section>
+					
+					<div class="col-md-12" id="block-Beruf-Text">
+						<div class="col-md-4"><label for="sel2">Ergebnisse pro Seite:</label></div>
+						<div class="col-md-8">
+							<select class="form-control" id="sel2">
+								 <option value="5">5 Ergebnisse</option>
+								 <option value="10">10 Ergebnisse</option>
+								 <option value="20">20 Ergebnisse</option>
+								 <option value="50">50 Ergebnisse</option>
+							</select>
+						</div>
+					</div>
+					
+					<div class="col-md-12" style="text-align:right">
+						<button class="btn btn-primary startseite-button-link" id="button-suchen">Suchen</button>
+					</div>
+					</div>
+				</form>
+				</section>
+			
+				<section id="footer">
+					<div class="col-md-12" id="strich-Fett"></div>
+						<div class="col-md-12">
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" class="table">
+							<tr>
+							<td><a class="druck" href="javascript:window.print();">DRUCKVERSION</a></td>
+							<td align="right"><a class="imp" href="/get/impressum">IMPRESSUM</a> &nbsp;|&nbsp;<a class="kontakt" href="http://www.wiesbaden.de/vv/produkte/80/141010100000023663.php">KONTAKT</a></td>
+							</tr>
+							</table>
+						</div>	
+				</section>
+			</div>
+			
+			<script>
+				 $(function(){
+					$(".dropdown-menu li a").click(function(){
+						$(".btn:first-child").text($(this).text());
+						$(".btn:first-child").val($(this).text());
+					});
+				});
+		</script>
+			
+	</body>
+</html>

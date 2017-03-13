@@ -1,0 +1,216 @@
+<!Doctype>
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-3.1.1.js"
+		integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+		crossorigin="anonymous"> </script>
+		<script src="../client.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
+		<link href="/style.css" rel="stylesheet"/>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</head>
+	
+	<body>
+		<div class="container" id="container-div">
+			<section id="header">
+				<div class="col-md-4 col-xs-6" id="logo-container"><img src="http://jobnavi-wiesbaden.pmode-dev.de/img/shared/Logo-Jobnavi.png" alt="logo"></div>
+                <div class="col-md-4 col-md-offset-4 col-xs-6" id="logo2-container"><img src="http://jobnavi-wiesbaden.pmode-dev.de/backend/img/logo_stadt.gif" alt="logo2"></div>
+			</section>
+			
+			<section id="login-startseite-header">
+				<div class="col-md-12"><h1>Administrations-Bereich der Jobnavi-Datenbank</h1></div>
+			</section>
+			
+			
+			<section id="login-startseite-hauptteil">
+				<div class="col-md-12">
+				<div class="table-responsive">
+					<table class="table">
+							<tr>
+								<td><h1>Praktikumspl&auml;tze</h1></td>
+								<td><h1>Branchen</h1></td>
+								<td><h1>Betriebe</h1></td>
+							</tr>
+						
+						
+								<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-anlegen">Neuen Praktikumsplatz anlegen</a></li></td>
+									<td><li><a href="/get/branchen-neue-branche-anlegen">Neue Branche anlegen</a></li></td>
+									<td><li><a href="/get/betriebe-neuen-betrieb-anlegen">Neuen Betrieb anlegen</a></li></td>
+									<td><li><a href="/backend/Logout">Logout</a></li></td>
+								</ul>
+							</tr>
+						</div>
+						
+						<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-suchen-bearbeiten">Praktikumsplatz suchen/bearbeiten</a></li></td>
+									<td><li><a href="/get/branchen-branche-bearbeiten">Branche bearbeiten</a></li></td>
+									<td><li><a href="/get/betriebe-betrieb-suchen-bearbeiten">Betrieb suchen/bearbeiten</a></li></td>
+								</ul>
+							</tr>
+						</div>
+						
+						<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-alle-anonymen-plaetze-anzeigen">Alle anonymen Pl&auml;tze anzeigen</a></li></td>
+									<td><li><a href="/get/branchen-alle-branchen-anzeigen">Alle Branchen anzeigen</a></li></td>
+									<td><li><a href="/get/betriebe-alle-betriebe-anzeigen">Alle Betriebe anzeigen</a></li></td>
+								</ul>
+							</tr>
+						</div>
+						
+						<div class="col-md-3">
+							<tr>
+								<ul>
+									<td><li><a href="/get/praktikumsplatz-alle-praktikumsplaetze">Alle Pl&auml;tze anzeigen</a></li></td>
+									<td></td>
+									<td><li><a href="/get/betriebe-betriebe-exortieren">Betriebe exortieren (.csv)</a></li></td>
+								</ul>
+							</tr>
+						</div>
+					</table>
+				</div>
+			</section>
+			
+			
+			
+			<section id="neuen-praktikumsplatz-anlegen">
+			
+				<div class="col-md-12"><h1>Neuen Praktikumsplatz anlegen</h1></div>
+			<div class="row praktikumsplatz-anlegen-abstand"></div>
+				<div class="row praktikumsplatz-anlegen-abstand">
+			<form action="/post/Daten" method="post">
+				<div class="col-md-4"><p>Betrieb*:</p></div>
+				<div class="col-md-3 col-md-offset-3">
+					<select required class="form-control" id="praktikumsplatz-betrieb-bezeichnung" name="praktikumsplatz-anlegen-select">
+							<option value="">Bitte w&auml;hlen</option>
+						    <option value="Alin Medien Design | Wiesbaden">Alin Medien Design | Wiesbaden</option>
+						    <option value="All Mountains Wiesbaden |  Wiesbaden">All Mountains Wiesbaden |  Wiesbaden</option>
+						    <option value="Antoniusheim Wiesbaden | Wiesbaden">Antoniusheim Wiesbaden | Wiesbaden</option>
+						    <option value="Anwaltskanzlei Apel | Wiesbaden">Anwaltskanzlei Apel | Wiesbaden</option>
+						    <option value="Anwaltskanzlei Meinke | Wiesbaden">Anwaltskanzlei Meinke | Wiesbaden</option>
+						    <option value="Autohaus 77 | Wiesbaden">Autohaus 77 | Wiesbaden</option>
+						    <option value="Aviconet GmbH | Wiesbaden">Aviconet GmbH | Wiesbaden</option>
+						    <option value="AXA Versicherungs AG , Agentur Monika Schaffer  | Wiesbaden-Mitte">AXA Versicherungs AG , Agentur Monika Schaffer  | Wiesbaden-Mitte </option>
+						    <option value="B&auml;ckerei Klein | Wiesbaden">B&auml;ckerei Klein | Wiesbaden</option>
+						    <option value="Bernhard Spiess Geb&auml;ude- und Kommunikationstechnik | Wiesbaden">Bernhard Spiess Geb&auml;ude- und Kommunikationstechnik | Wiesbaden</option>
+						    <option value="Betrieb E | Wiesbaden">Betrieb E | Wiesbaden</option>
+						    <option value="Bildungszentrum Kalle Albert - InfraServ GmbH & Co. Wiesbaden KG | Wiesbaden">Bildungszentrum Kalle Albert - InfraServ GmbH & Co. Wiesbaden KG | Wiesbaden</option>
+						    <option value="BKS Werbemittel | Wiesbaden">BKS Werbemittel | Wiesbaden</option>
+						    <option value="Cartridge Center |  Wiesbaden">Cartridge Center |  Wiesbaden</option>
+						    <option value="CN Competence Network GmbH | Wiesbaden">CN Competence Network GmbH | Wiesbaden</option>
+						    <option value="Continentale Versicherungsverbund  | Wiesbaden">Continentale Versicherungsverbund  | Wiesbaden </option>
+						    <option value="Contrast Vielfalt und Farbe GmbH | Wiesbaden">Contrast Vielfalt und Farbe GmbH | Wiesbaden </option>
+						    <option value="Crowne Plaza Wiesbaden | Wiesbaden">Crowne Plaza Wiesbaden | Wiesbaden</option>
+						    <option value="Das Depot | Wiesbaden">Das Depot | Wiesbaden</option>
+						    <option value="Deutsche Post DHL- BRIEF Wiesbaden  | Mainz-Kastel">Deutsche Post DHL- BRIEF Wiesbaden  | Mainz-Kastel </option>
+						    <option value="Deutscher Genossenschaftsverlag eG | Wiesbaden">Deutscher Genossenschaftsverlag eG | Wiesbaden</option>
+						    <option value="Die Rasselbande | Wiesbaden">Die Rasselbande | Wiesbaden</option>
+						    <option value="Dr. Horst-Schmidt-Kliniken GmbH | Wiesbaden">Dr. Horst-Schmidt-Kliniken GmbH | Wiesbaden</option>
+						    <option value="F.Ad. Müller Söhne OHG | Wiesbaden">F.Ad. Müller Söhne OHG | Wiesbaden</option>
+						    <option value="Friseur C&M Company | Wiesbaden">Friseur C&M Company | Wiesbaden</option>
+						    <option value="Go! Advertising - Gesellschaft für Marketing | Wiesbaden">Go! Advertising - Gesellschaft für Marketing | Wiesbaden</option>
+						    <option value="Gravis Shop Computer Vertrieb | Wiesbaden">Gravis Shop Computer Vertrieb | Wiesbaden</option>
+						    <option value="Harput | Wiesbaden">Harput | Wiesbaden</option>
+						    <option value="Haus- und Gartenservice R. Faßbinder | Wiesbaden">Haus- und Gartenservice R. Faßbinder | Wiesbaden</option>
+						    <option value="kommit - Internationales Bildungszentrum Rhein-Main für Pflegeberufe - - staatlich anerkannte Altenpflegeschule - | Frankfurt">kommit - Internationales Bildungszentrum Rhein-Main für Pflegeberufe - - staatlich anerkannte Altenpflegeschule - | Frankfurt</option>
+						    <option value="Landeshauptstadt Wiesbaden Amt für Wirtschaft und Liegenschaften | Wiesbaden">Landeshauptstadt Wiesbaden Amt für Wirtschaft und Liegenschaften | Wiesbaden</option><option value="LATI Industria Termoplastici Deutschland GmbH | Wiesbaden">LATI Industria Termoplastici Deutschland GmbH | Wiesbaden</option>
+						    <option value="Mac Donalds | Wiesbaden">Mac Donalds | Wiesbaden</option>
+						    <option value="MannMobilia Wiesbaden | Wiesbaden">MannMobilia Wiesbaden | Wiesbaden</option>
+						    <option value="Mecklenburgische Versicherungsgruppe | Wiesbaden">Mecklenburgische Versicherungsgruppe | Wiesbaden</option>
+						    <option value="Medienzentrum Wiesbaden e.V. | Wiesbaden">Medienzentrum Wiesbaden e.V. | Wiesbaden </option>
+						    <option value="MH Montage | Wiesbaden-Erbenheim">MH Montage | Wiesbaden-Erbenheim</option>
+						    <option value="NASPA | Wiesbaden">NASPA | Wiesbaden</option>
+						    <option value="Ökosmetik | Wiesbaden">Ökosmetik | Wiesbaden</option>
+						    <option value="Rechtsanwaltkanzlei Monessa Weber | Wiesbaden">Rechtsanwaltkanzlei Monessa Weber | Wiesbaden </option>
+						    <option value="redpeppix.GmbH | Wiesbaden">redpeppix.GmbH | Wiesbaden</option>
+						    <option value="REPASACK GmbH | Wiesbaden">REPASACK GmbH | Wiesbaden</option>
+						    <option value="Restaurant Aqua - Im Thermalbad Aukammtal | Wiesbaden">Restaurant Aqua - Im Thermalbad Aukammtal | Wiesbaden</option>
+						    <option value="retrosuzhi | Wiesbaden">retrosuzhi | Wiesbaden</option>
+						    <option value="R&uuml;cker AG | Wiesbaden">R&uuml;cker AG | Wiesbaden</option>
+						    <option value="Seniorenwohnanlage Dr. Drexler | Wiesbaden">Seniorenwohnanlage Dr. Drexler | Wiesbaden</option>
+						    <option value="SOMIT Mitnahme-M&ouml;bel-Discount | Wiesbaden">SOMIT Mitnahme-M&ouml;bel-Discount | Wiesbaden</option>
+						    <option value="Sparkassenversicherung | Wiesbaden">Sparkassenversicherung | Wiesbaden</option>
+						    <option value="Stillger für K&uuml;che, Tisch und Tafel | Wiesbaden">Stillger für K&uuml;che, Tisch und Tafel | Wiesbaden</option>
+						    <option value="Subway Wiesbaden | Wiesbaden">Subway Wiesbaden | Wiesbaden</option>
+						    <option value="Uwe Lange Heizungsinstallateur | Wiesbaden">Uwe Lange Heizungsinstallateur | Wiesbaden</option>
+						    <option value="West End One GmbH | Wiesbaden">West End One GmbH | Wiesbaden</option>
+						    <option value="Wiesbadener Kinofestival e.V. | Wiesbaden">Wiesbadener Kinofestival e.V. | Wiesbaden</option>
+						    <option value="Zahnarzt Dr. Uwe Steffen | Wiesbaden">Zahnarzt Dr. Uwe Steffen | Wiesbaden</option>    
+					</select>
+				</div>
+				</div>
+				
+				<div class="row praktikumsplatz-anlegen-abstand">
+					<div class="col-md-4"><p>Anonym einstellen:</p></div>
+					<div class="col-md-3 col-md-offset-3"><input type="checkbox" name="anonym" class="form-control" id="anonymeEinstellung" value="1"></div>
+				</div>
+				
+				<div class="row praktikumsplatz-anlegen-abstand">
+					<div class="col-md-4"><p>Branche*:</p></div>
+					<div class="col-md-3 col-md-offset-3">
+						<select required class="form-control" id="branche" name="branche-select">
+							<option value>Bitte w&auml;hlen</option>
+							<option value="">Bitte w&auml;hlen</option>
+							<option value="Bank">Bank</option>
+							<option value="B&uuml;ro">B&uuml;ro</option>
+							<option value="Computer & EDV">Computer & EDV</option>
+							<option value="Dienstleistung">Dienstleistung</option>
+							<option value="Einzelhandel">Einzelhandel</option>
+							<option value="Finanzen & Versicherungen">Finanzen & Versicherungen</option>
+							<option value="Hotel">Hotel</option>
+							<option value="Immobilien & Baugewerbe">Immobilien & Baugewerbe</option>
+							<option value="Industrie & Handwerk">Industrie & Handwerk</option>
+							<option value="Lebensmittel">Lebensmittel</option>
+							<option value="Logistik und Kommunikation">Logistik und Kommunikation</option>
+							<option value="Medizin & Gesundheit">Medizin & Gesundheit</option>
+							<option value="&Ouml;ffentlicher Dienst">&Ouml;ffentlicher Dienst</option>
+							<option value="Unternehmensberatung">Unternehmensberatung</option>
+							<option value="Werbung">Werbung</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="row praktikumsplatz-anlegen-abstand">
+					<div class="col-md-4"><p>Bezeichnung*:</p></div>
+					<div class="col-md-3 col-md-offset-3"><input required type="text" class="form-control" id="bezeichnung" name="bezeichnung" value></div>
+				</div>
+				
+				<div class="row praktikumsplatz-anlegen-abstand">
+					<div class="col-md-4" id="text-mitte" name="kurzbeschreibung"><p>Kurzbeschreibung*:</p></div>
+					<div class="col-md-3 col-md-offset-3"><textarea class="form-control kurzbeschreibung" id="praktikumsplatz-anlegen-textArea" name="kurzbeschreibung"></textarea></div>
+				</div>
+				
+				<div class="row praktikumsplatz-anlegen-abstand">
+					<div class="col-md-4" id="text-mitte" name="tätigkeiten"><p>T&auml;tigkeiten*:</p></div>
+					<div class="col-md-3 col-md-offset-3"><textarea required class="form-control tätigkeiten" id="praktikumsplatz-anlegen-textArea" name="tätigkeiten"></textarea></div>
+				</div>
+				
+				<div class="row praktikumsplatz-anlegen-abstand">
+					<div class="col-md-4" id="text-mitte" name="anforderungen"><p>Anforderungen*:</p></div>
+					<div class="col-md-3 col-md-offset-3"><textarea required class="form-control anforderungen" id="praktikumsplatz-anlegen-textArea" name="anforderungen"></textarea></div>
+				</div>
+				
+				<div class="row praktikumsplatz-anlegen-abstand">
+					<div class="col-md-4" id="text-mitte" name="notizen"><p>Notizen:</p></div>
+					<div class="col-md-3 col-md-offset-3"><textarea class="form-control notizen" id="praktikumsplatz-anlegen-textArea" name="notizen"></textarea></div>
+				</div>
+				
+				<div class="col-md-4"></div>
+				
+				<div class="col-md-3 col-md-offset-3"><input type="submit" class="btn btn-primary button-breite praktikumsplatz-anlegen-button" id="button-suchen" value="Anlegen"></div>
+			</form>
+			</section>
+			
+			<section id="login-startseite-footer">
+				<!--<div class="col-md-12"><h1>Wiedervorlagen vom heutigen Tag</h1></div>-->
+			</section>
+		</div>
+		
+	</body>
+</html>
